@@ -1,6 +1,5 @@
 const counter = document.querySelector(".counter")
-const subtractButton = document.querySelector(".subtract")
-const addButton = document.querySelector(".add")
+const buttons = document.querySelectorAll("[data-control]")
 var currentValue = Number(counter.innerText);
 
 function incrementValue(number) {
@@ -16,6 +15,7 @@ function pressButton() {
     displayValue()
 }
 
-subtractButton.addEventListener("click", pressButton)
-addButton.addEventListener('click', pressButton)
+buttons.forEach(button => {
+    button.addEventListener("click", pressButton) 
+});
 
