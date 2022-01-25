@@ -34,7 +34,7 @@ function displayValue() {
 }
 
 function pressButton() {
-    incrementValue(Number(this.getAttribute("data-increment-step")))
+    incrementValue(Number(this.getAttribute(incrementStepAttribute)))
     displayValue()
 }
 
